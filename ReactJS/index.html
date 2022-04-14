@@ -17,10 +17,28 @@
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-    function Header() {
-    return (<div>la maison Jungle.</div>)
+      function Banner() {
+          const Titre = " la maison Jungle ."
+    return (<h1>{Titre.toUpperCase()}</h1>)
+} 
+
+function Cart(){
+    const MonsteraPrice = 8;
+    const IvyPrice = 10;
+    const FlowerPrice=15;
+    return(<div>
+        <ul>
+            <h2> Panier </h2>
+             <li>Monstera : {MonsteraPrice} €</li>
+             <li>IvyPrice : {IvyPrice} €</li>
+             <li>FlowerPrice : {FlowerPrice} €</li>
+             <li>Total : {MonsteraPrice+IvyPrice+FlowerPrice}€</li>
+        
+        </ul>
+        </div>
+        )
 }
-ReactDOM.render(<Header />, document.getElementById("root"))
+        ReactDOM.render(<div><Banner/><Cart/></div>, document.getElementById("root"))
     </script>
 </body>
 </html>
